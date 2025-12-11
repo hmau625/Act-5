@@ -1,0 +1,21 @@
+<div class="rick-page" *ngIf="character">
+  <div class="rick-card">
+
+    <div class="poster">
+      <img [src]="character.image" alt="{{ character.name }}">
+    </div>
+
+    <div class="info">
+      <h1>{{ character.name }}</h1>
+
+      <p><strong>ID:</strong> {{ character.id }}</p>
+      <p><strong>Nombre:</strong> {{ character.name }}</p>
+      <p><strong>Género:</strong> {{ character.gender }}</p>
+      <p><strong>Origen:</strong> {{ character.origin.name }}</p>
+      <p><strong>Especie:</strong> {{ character.species }}</p>
+      <p><strong>Estado:</strong> {{ character.status }}</p>
+      <p><strong>Locación:</strong> {{ character.location.name }}</p>
+    </div>
+
+  </div>
+</div>

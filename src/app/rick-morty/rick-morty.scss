@@ -1,0 +1,90 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 20px;
+  justify-content: center;
+  background: radial-gradient(circle at center, #0a0a15, #000);
+}
+.rick-background {
+  background: url('/rick.jpg') center/cover no-repeat fixed;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+
+/* --- TARJETA ESPACIAL --- */
+.card {
+  width: 220px;
+  height: 330px; /* Tamaño uniforme */
+  background: linear-gradient(145deg, #1a1a2e, #0f0f1a);
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  color: #e0e0ff;
+
+  border: 1px solid rgba(0,255,255,0.3);
+  box-shadow:
+     0 0 12px rgba(0, 255, 255, 0.2),
+     inset 0 0 10px rgba(0, 255, 255, 0.1);
+
+  backdrop-filter: blur(4px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: transform .3s, box-shadow .3s, border .3s;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.06);
+  border-color: cyan;
+  box-shadow:
+     0 0 20px rgba(0, 255, 255, 0.6),
+     0 0 60px rgba(0, 100, 255, 0.4);
+}
+
+/* --- IMAGEN --- */
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(0,255,255,0.25);
+  filter: brightness(0.95);
+  transition: filter .3s;
+}
+
+.card:hover img {
+  filter: brightness(1.15);
+}
+
+/* --- TÍTULO --- */
+.card h2 {
+  font-size: 20px;
+  margin: 12px 0 6px;
+  text-shadow: 0 0 6px cyan;
+  letter-spacing: 0.5px;
+}
+
+/* --- DESCRIPCIÓN --- */
+.card p {
+  font-size: 14px;
+  opacity: 0.85;
+  padding: 0 12px 12px;
+  line-height: 1.4em;
+}
+
+/* --- BRILLO SUTIL EN LAS ESQUINAS --- */
+.card::before {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 330px;
+  border-radius: 16px;
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle at top left,
+              rgba(0,255,255,0.25), transparent 50%);
+  pointer-events: none;
+}

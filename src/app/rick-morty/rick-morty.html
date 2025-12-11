@@ -1,0 +1,14 @@
+<div class="rick-background">
+  <h1 style="text-decoration: aliceblue;">Rick and Morty</h1>
+
+  <div class="cards">
+    <div class="card" 
+        *ngFor="let character of characters"
+        (click)="openCharacter(character.id)">
+        
+      <img [src]="character.image" alt="{{ character.name }}">
+      <h2>{{ character.name }}</h2>
+      <p>{{ character.species }}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="simp-background">
+  <h1>Personajes de Los Simpson</h1>
+
+  <div class="cards">
+    <div class="card" 
+         *ngFor="let character of characters"
+         (click)="openCharacter(character.id)">
+      <img src="https://cdn.thesimpsonsapi.com/500{{character.portrait_path}}" 
+           alt="{{ character.name }}">
+      <h2>{{ character.name }}</h2>
+      <p><strong>ID:</strong> {{ character.id }}</p>
+      <p><strong>Edad:</strong> {{ character.age ?? 'Desconocida' }}</p>
+      <p><strong>Ocupación:</strong> {{ character.occupation ?? 'No disponible' }}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div *ngIf="character" class="simp-page">
+
+  <div class="simp-card">
+    <img src="https://cdn.thesimpsonsapi.com/500{{character.portrait_path}}" 
+         alt="{{ character.name }}">
+
+    <h1>{{ character.name }}</h1>
+
+    <p><strong>ID:</strong> {{ character.id }}</p>
+    <p><strong>Edad:</strong> {{ character.age ?? 'Desconocida' }}</p>
+    <p><strong>Fecha de nacimiento:</strong> {{ character.birthdate || 'No disponible' }}</p>
+    <p><strong>Género:</strong> {{ character.gender ?? 'No disponible' }}</p>
+    <p><strong>Frases:</strong> 
+      <span *ngFor="let phrase of character.phrases; let i = index">
+        "{{ phrase }}"<span *ngIf="i < character.phrases.length - 1">, </span>
+      </span>
+    </p>
+    <p><strong>Ocupación:</strong> {{ character.occupation ?? 'No disponible' }}</p>
+  </div>
+
+</div>

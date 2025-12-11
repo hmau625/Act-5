@@ -1,0 +1,63 @@
+.rick-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+
+  background: url('/rick.jpg') center/cover no-repeat fixed;
+}
+
+.rick-card {
+  display: flex;
+  gap: 25px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  max-width: 900px;
+  width: 90%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.poster img {
+  width: 260px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.info p {
+  font-size: 18px;
+  margin: 6px 0;
+  line-height: 1.4;
+}
+
+/* Responsive (móvil) */
+@media (max-width: 768px) {
+  .rick-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .poster img {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
